@@ -1,0 +1,7 @@
+numpy
+pandas
+streamlit
+plotly
+PyYAML
+pandas_gbq
+protobuf==3.20.*
