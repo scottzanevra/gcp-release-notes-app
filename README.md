@@ -1,6 +1,9 @@
 
 # How to Run 
 
+- Create Service Account with Big Query read access
+- Download the Service Account JSON key locally
+
 - Clone the repository
 - Setup Virtual environment
 ```
