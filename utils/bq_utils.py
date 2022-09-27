@@ -1,9 +1,6 @@
 import logging
-import os
-
 import pandas as pd
 from google.oauth2 import service_account
-
 from utils.config import get_config
 
 logger = logging.getLogger()
@@ -25,11 +22,6 @@ def fetch_release_data(days_ago=90):
     result = fetch_data_bigquery(query)
     return result
 
-
-# def fetch_distinct_gcp_service_list(project_id):
-#     query="SELECT DISTINCT product_name FROM `bigquery-public-data.google_cloud_release_notes.release_notes`"
-#     result = fetch_data_bigquery(project_id, query)
-#     return result
 
 if __name__ == '__main__':
     data = fetch_release_data(7)
