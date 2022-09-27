@@ -1,3 +1,47 @@
+
+# How to Run 
+
+- Clone the repository
+- Setup Virtual environment
+```
+$ python3 -m venv env
+```
+- Activate the virtual environment
+```
+$ source env/bin/activate
+```
+- Install dependencies using
+```
+$ pip install -r requirements.txt
+```
+- Set Environment Variables
+```shell
+export PATH_TO_PRIVATE_KEY = <PATH TO JSON FILE>
+export PROJECT_ID = <PATH TO JSON PROJECT_ID>
+export CONFIG_FILE = <PATH TO CONFIG_FILE>
+```
+- Set Project Root Directory
+```
+gcp-release-notes-app
+eg. /Users/xxx/PycharmProjects/gcp-release-notes-app/
+```
+- Run Config script 
+```
+$ python utils/config.py
+```
+- Confirm Config file has been generated and values are correct
+```
+/Users/xxx/PycharmProjects/gcp-release-notes-app/config.yml
+```
+
+- Run Streamlit (from the project root directory)
+```
+$ streamlit run app.py
+```
+
+
+
+
 # Cloud Run Hello World Sample
 
 This sample shows how to deploy a Hello World application to Cloud Run.
