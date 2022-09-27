@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 - Set Environment Variables
 ```shell
 export PATH_TO_PRIVATE_KEY = <PATH TO JSON FILE>
-export PROJECT_ID = <PATH TO JSON PROJECT_ID>
+export PROJECT_ID = <PROJECT_ID>
 export CONFIG_FILE = <PATH TO CONFIG_FILE>
 ```
 - Set Project Root Directory
