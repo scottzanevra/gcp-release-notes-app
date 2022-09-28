@@ -11,11 +11,14 @@ GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'dataplex-demo-342803')
 GCP_DATA_SERVICES_GROUPS = os.environ.get('GCP_DATA_SERVICES_GROUPS',
                                           '/Users/szanevra/Downloads/dataplex-demo-342803-e2b0cc499e2a.json')
 
-st.title('Google Cloud Release Notes')
 config = get_config()
+st.set_page_config(page_title=config['application']['name'], page_icon=None, layout=config['application']['layout'],
+                   initial_sidebar_state="auto", menu_items=None)
+st.title('Google Cloud Release Notes')
 
 # Get the Time Range selection options from config
 days_ago_selector = st.sidebar.selectbox("Time Range (Days Ago)", config['time_ranges'])
+
 
 
 @st.cache

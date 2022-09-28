@@ -1,3 +1,7 @@
+application:
+  name: "GCP Release Notes"
+  layout: "wide"
+
 time_ranges:
   - 7
   - 14
