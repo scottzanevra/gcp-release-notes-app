@@ -1,0 +1,27 @@
+time_ranges:
+  - 7
+  - 14
+  - 21
+  - 30
+  - 60
+  - 90
+gcp_data_services_groups:
+  account_one:
+  - Cloud Spanner
+  - Dataflow
+  - Pub/Sub
+  - BigQuery
+  account_two:
+  - Cloud Spanner
+  - Dataflow
+  - BigQuery ML
+  data_services:
+  - Cloud Spanner
+  - Dataflow
+  - Pub/Sub
+  - BigQuery
+  - BigQuery ML
+  - Cloud Storage
+  - Vertex AI
+  - Document AI
+  - Dataform

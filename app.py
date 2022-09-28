@@ -1,21 +1,21 @@
 import os
-
-import alt as alt
 import streamlit as st
-import pandas as pd
-import numpy as np
 import plotly.express as px
 
 from utils.bq_utils import fetch_release_data
 from utils.config import get_config
-from utils.helper import get_keys_from_dict, left_join_lists
+from utils.helper import get_keys_from_dict
+
+# Get environment variables
+GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'dataplex-demo-342803')
+GCP_DATA_SERVICES_GROUPS = os.environ.get('GCP_DATA_SERVICES_GROUPS',
+                                          '/Users/szanevra/Downloads/dataplex-demo-342803-e2b0cc499e2a.json')
 
 st.title('Google Cloud Release Notes')
 config = get_config()
-data_services = ['Cloud Spanner', 'Dataflow', 'Pub/Sub', 'BigQuery', 'BigQuery ML','Cloud Storage', 'Vertex AI', 'Document AI', 'Dataform']
-time_range = ["7", "14", "30", "60", "90"]
 
-days_ago_selector = st.sidebar.selectbox("Time Range (Days Ago)", time_range)
+# Get the Time Range selection options from config
+days_ago_selector = st.sidebar.selectbox("Time Range (Days Ago)", config['time_ranges'])
 
 
 @st.cache
@@ -32,7 +32,6 @@ with st.spinner('Updating Report...'):
     gcp_service_list = gcp_service_df['product_name'].unique()
     # List of all GCP Release Types that have had an update
     release_note_type = gcp_service_df['release_note_type'].unique()
-
 
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Total Releases", len(gcp_service_df))

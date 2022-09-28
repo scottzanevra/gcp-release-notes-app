@@ -1,24 +1,30 @@
 import logging
+import os
 import pandas as pd
 from google.oauth2 import service_account
-from utils.config import get_config
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-config = get_config()
+# Get environment variables
+GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'dataplex-demo-342803')
+GCP_DATA_SERVICES_GROUPS = os.environ.get('GCP_DATA_SERVICES_GROUPS',
+                                '/Users/szanevra/Downloads/dataplex-demo-342803-e2b0cc499e2a.json')
+
+# Set environment variables
+os.environ['CONFIG_FILE'] = 'config.yml'
 
 
 def fetch_data_bigquery(query):
     # Run a Standard SQL query with the project set explicitly
-    credentials = service_account.Credentials.from_service_account_file(config['gcp_path_to_private_key'])
-    project_id = config['gcp_project_id']
-    df = pd.read_gbq(query, project_id=project_id, dialect='standard', credentials=credentials)
+    credentials = service_account.Credentials.from_service_account_file(GCP_DATA_SERVICES_GROUPS)
+    df = pd.read_gbq(query, project_id=GCP_PROJECT_ID, dialect='standard', credentials=credentials)
     return df
 
 
 def fetch_release_data(days_ago=90):
-    query = f"SELECT * FROM `bigquery-public-data.google_cloud_release_notes.release_notes` WHERE published_at >= DATE_ADD(CURRENT_DATE(), INTERVAL -{days_ago} DAY)"
+    query = f"SELECT * FROM `bigquery-public-data.google_cloud_release_notes.release_notes` " \
+            f"WHERE published_at >= DATE_ADD(CURRENT_DATE(), INTERVAL -{days_ago} DAY)"
     result = fetch_data_bigquery(query)
     return result
 

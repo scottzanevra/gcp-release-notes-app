@@ -23,18 +23,16 @@ export PATH_TO_PRIVATE_KEY = <PATH TO JSON FILE>
 export PROJECT_ID = <PROJECT_ID>
 export CONFIG_FILE = <PATH TO CONFIG_FILE>
 ```
+- OR Update Environment Variables default Values in app.py
+```shell
+export PATH_TO_PRIVATE_KEY = <PATH TO JSON FILE>
+export PROJECT_ID = <PROJECT_ID>
+export CONFIG_FILE = <PATH TO CONFIG_FILE>
+```
 - Set Project Root Directory
 ```
 gcp-release-notes-app
 eg. /Users/xxx/PycharmProjects/gcp-release-notes-app/
-```
-- Run Config script 
-```
-$ python utils/config.py
-```
-- Confirm Config file has been generated and values are correct
-```
-/Users/xxx/PycharmProjects/gcp-release-notes-app/config.yml
 ```
 
 - Run Streamlit (from the project root directory)
