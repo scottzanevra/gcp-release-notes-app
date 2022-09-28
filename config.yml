@@ -2,6 +2,7 @@ application:
   name: "GCP Release Notes"
   layout: "wide"
 
+# Defines the time range option for the selector
 time_ranges:
   - 7
   - 14
@@ -9,6 +10,9 @@ time_ranges:
   - 30
   - 60
   - 90
+
+# Use this section to Organise how the services are Grouped
+# Different Teams may want the own list
 gcp_data_services_groups:
   account_one:
   - Cloud Spanner
