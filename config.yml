@@ -12,7 +12,7 @@ time_ranges:
   - 90
 
 # Use this section to Organise how the services are Grouped
-# Different Teams may want the own list
+# Different Teams may want their own list
 gcp_data_services_groups:
   account_one:
   - Cloud Spanner
