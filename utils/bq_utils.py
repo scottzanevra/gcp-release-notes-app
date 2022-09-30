@@ -8,7 +8,7 @@ logger.setLevel(logging.INFO)
 
 # Get environment variables
 GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'dataplex-demo-342803')
-GCP_DATA_SERVICES_GROUPS = os.environ.get('GCP_DATA_SERVICES_GROUPS',
+PATH_TO_PRIVATE_KEY = os.environ.get('PATH_TO_PRIVATE_KEY',
                                 '/Users/szanevra/Downloads/dataplex-demo-342803-e2b0cc499e2a.json')
 
 # Set environment variables
@@ -17,7 +17,7 @@ os.environ['CONFIG_FILE'] = 'config.yml'
 
 def fetch_data_bigquery(query):
     # Run a Standard SQL query with the project set explicitly
-    credentials = service_account.Credentials.from_service_account_file(GCP_DATA_SERVICES_GROUPS)
+    credentials = service_account.Credentials.from_service_account_file(PATH_TO_PRIVATE_KEY)
     df = pd.read_gbq(query, project_id=GCP_PROJECT_ID, dialect='standard', credentials=credentials)
     return df
 

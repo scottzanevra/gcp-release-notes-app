@@ -8,7 +8,7 @@ from utils.helper import get_keys_from_dict
 
 # Get environment variables
 GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'dataplex-demo-342803')
-GCP_DATA_SERVICES_GROUPS = os.environ.get('GCP_DATA_SERVICES_GROUPS',
+PATH_TO_PRIVATE_KEY = os.environ.get('PATH_TO_PRIVATE_KEY',
                                           '/Users/szanevra/Downloads/dataplex-demo-342803-e2b0cc499e2a.json')
 
 config = get_config()
