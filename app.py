@@ -7,9 +7,9 @@ from utils.config import get_config
 from utils.helper import get_keys_from_dict
 
 # Get environment variables
-GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'dataplex-demo-342803')
+GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID', '<default project ID>')
 PATH_TO_PRIVATE_KEY = os.environ.get('PATH_TO_PRIVATE_KEY',
-                                          '/Users/szanevra/Downloads/dataplex-demo-342803-e2b0cc499e2a.json')
+                                          '<default path>')
 
 config = get_config()
 st.set_page_config(page_title=config['application']['name'], page_icon=None, layout=config['application']['layout'],
