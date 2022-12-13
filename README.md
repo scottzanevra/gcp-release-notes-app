@@ -17,7 +17,10 @@ In this example, and the default configuration for this app is to have four sect
 
 ![alt text](img/gcp_service_grouping.png)
 
-# How to Run 
+
+# Deployment
+
+##  How to Run locally 
 
 - Create Service Account with Big Query read access
 - Download the Service Account JSON key locally
@@ -61,7 +64,7 @@ $ streamlit run app.py
 
 
 
-# Cloud Run Hello World Sample
+# Cloud Run Hello World Sample - NOT COMPLETE
 
 This sample shows how to deploy a Hello World application to Cloud Run.
 
