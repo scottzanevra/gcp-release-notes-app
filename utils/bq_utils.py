@@ -7,9 +7,8 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 # Get environment variables
-GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID', 'dataplex-demo-342803')
-PATH_TO_PRIVATE_KEY = os.environ.get('PATH_TO_PRIVATE_KEY',
-                                '/Users/szanevra/Downloads/dataplex-demo-342803-e2b0cc499e2a.json')
+GCP_PROJECT_ID = os.getenv('GCP_PROJECT_ID')
+PATH_TO_PRIVATE_KEY = os.environ.get('PATH_TO_PRIVATE_KEY')
 
 # Set environment variables
 os.environ['CONFIG_FILE'] = 'config.yml'

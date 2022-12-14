@@ -8,9 +8,6 @@ logger.setLevel(logging.INFO)
 
 def load_config_file(config_file='config.yml'):
     """
-   Currently we load from YAML for the heck of it - it contains stuff for
-   working with proxies buckets and queues.
-
    :param config_file: The path and name to our configuration YAML.
    :return: Config dictionary for other functions and methods to use.
    """

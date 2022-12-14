@@ -1,8 +1,8 @@
 
 
-export PROJECT_ID=dataplex-demo-342803
-export APP_NAME=dataplex-demo-342803
-export PATH_TO_PRIVATE_KEY="/Users/szanevra/Downloads/dataplex-demo-342803-e2b0cc499e2a.json"
+export PROJECT_ID=
+export APP_NAME=
+export PATH_TO_PRIVATE_KEY=
 
 gcloud config set project ${PROJECT_ID}
 
