@@ -1,18 +1,18 @@
 # GCP Release Announcements App
 
 ### Problem does the app solve
-This app can be used to stay up to date will all the new GCP releases notes/features.
+This app can be used to stay up to date with all the new GCP releases notes/features.
 Users are able to configure this app using the config.yaml file to group and categorise specific service they are interested in.
 
 ### Time Range Picker
-The time range picker allows the user to configure how far back in time they would liek to view the release notes
+The time range picker allows the user to configure how far back in time they would like to view the release notes (Show all release in the last 21 days)
 
 ### Release Summary 
-The first part of the app capture summary of all release over the given time period including the Product category and Release type
+The first part of the app displays a summary of all release over the given time period including the Product category and Release type
 ![alt text](img/gcp_release_summary.png)
 
 ### Specific Services 
-The second section allow the user customise and group certain services for easy viewing.
+The second section allows the user customise and group certain services for easy viewing.
 In this example, and the default configuration for this app is to have four sections with the data service being shown in the image below.
 
 ![alt text](img/gcp_service_grouping.png)
